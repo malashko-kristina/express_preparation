@@ -38,7 +38,7 @@ public class FirstHomeWork {
 
         System.out.println("Ширина: " + width);
         System.out.println("Длина: " + length);
-        System.out.println("Площадь: " + (int)area);
+        System.out.println("Площадь: " + (int) area);
     }
 
     public static void checkDivisionResultAndRemainder() {
@@ -52,7 +52,7 @@ public class FirstHomeWork {
         while (b == 0) {
             System.out.print("Введите второе число: ");
             b = scanner.nextInt();
-            }
+        }
 
         System.out.println("Результат деления: " + a / b);
         System.out.println("Остаток: " + a % b);
@@ -63,7 +63,7 @@ public class FirstHomeWork {
         System.out.print("Введите температуру в Цельсиях: ");
         int a = scanner.nextInt();
 
-        int result = a  * 9 / 5 + 32;
+        int result = a * 9 / 5 + 32;
         System.out.println("Температура в Фаренгейтах: " + result);
     }
 
@@ -252,6 +252,17 @@ public class FirstHomeWork {
         }
     }
 
+    public static void checkMultiplicationTableCreation() {
+        // Выведите таблицу умножения от 1 до 10 в формате.
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+            System.out.println();
+        }
+    }
+
+
     public static void checkPrintStars() {
         // Напишите программу, которая выводит прямоугольник из звёздочек размером M x N (пользователь вводит размеры).
         System.out.print("Введите M: ");
@@ -267,4 +278,61 @@ public class FirstHomeWork {
             System.out.print("\n");
         }
     }
+
+    public static void checkBuildAPyramidOfStars() {
+        // Реализуйте программу, которая выводит пирамиду из звёздочек высотой N.
+        System.out.print("Введите N: ");
+        int n = scanner.nextInt();
+
+        // Внешний цикл для строк пирамиды
+        for (int i = 1; i <= n; i++) {
+            // Цикл для пробелов перед звёздочками
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Цикл для звёздочек
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            // Переход на следующую строку
+            System.out.println();
+        }
+        scanner.close(); // Закрываем Scanner
+    }
+
+    public static void checkPrimeNumbers() {
+        // Найдите все простые числа от 2 до N. Используйте вложенные циклы для проверки делимости.
+        System.out.print("Введите N: ");
+        int n = scanner.nextInt();
+
+        for (int i = 2; i <= n; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+    public static void checkChessDesk() {
+        // Выведите шахматную доску размером N x N, где клетки чередуются символами # и ..
+        System.out.print("Введите N: ");
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("#");
+                } else {
+                    System.out.print(".");
+                }
+            }
+            System.out.println();
+        }
+    }
+
 }
