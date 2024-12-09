@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DataStructure {
 
-    // Написать метод, который принимает массив целых чисел и возвращает сумму всех элементов массива.
+    // 1. Написать метод, который принимает массив целых чисел и возвращает сумму всех элементов массива.
     public static int sumArray(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -16,7 +16,7 @@ public class DataStructure {
         return sum;
     }
 
-    // Создать функцию, которая принимает строку и возвращает её в обратном порядке.
+    // 2. Создать функцию, которая принимает строку и возвращает её в обратном порядке.
     public static String reverseString(String str) {
         String result = "";
         for (int i = str.length() - 1; i >= 0; i--) {
@@ -25,7 +25,7 @@ public class DataStructure {
         return result;
     }
 
-    // Разработать метод, который принимает список целых чисел и удаляет из него все четные числа.
+    // 3. Разработать метод, который принимает список целых чисел и удаляет из него все четные числа.
     public static List<Integer> cleanList(List<Integer> lst) {
         Iterator<Integer> iterator = lst.iterator();
         while (iterator.hasNext()) {
@@ -51,7 +51,7 @@ public class DataStructure {
      * Работает на основе дерева.
      */
 
-    // Написать функцию, которая принимает массив целых чисел и возвращает количество уникальных чисел в этом массиве.
+    // 4. Написать функцию, которая принимает массив целых чисел и возвращает количество уникальных чисел в этом массиве.
     public static int returnSet(int[] arr) {
         // Используем HashSet для хранения уникальных чисел
         HashSet<Integer> uniqueNumbers = new HashSet<>();
@@ -62,7 +62,7 @@ public class DataStructure {
         return uniqueNumbers.size();
     }
 
-    // Создать метод, который считает количество вхождений каждого символа в переданной строке
+    // 5. Создать метод, который считает количество вхождений каждого символа в переданной строке
     // и возвращает результат в виде карты (map).
     public static HashMap resultMap(String str) {
         str = str.toLowerCase();
@@ -80,7 +80,7 @@ public class DataStructure {
         return resultMap;
     }
 
-    // Написать разворачивание списка с Node
+    // 6. Написать разворачивание списка с Node
     // Узел односвязного списка
     public static class Node {
         int value; // Значение узла
