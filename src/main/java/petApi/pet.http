@@ -1,0 +1,53 @@
+### Create a pet
+POST https://petstore.swagger.io/v2/pet
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 111,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
+
+### Get a pet by id
+GET https://petstore.swagger.io/v2/pet/111
+
+### Update pet's info
+PUT https://petstore.swagger.io/v2/pet
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1999,
+  "category": {
+    "id": 0,
+    "name": "Bella"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
+
+### Delete created pet
+DELETE https://petstore.swagger.io/v2/pet/111
