@@ -10,9 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
 
-    private SelenideElement userNameInput = $("[data_test='username']");
-    private SelenideElement passwordNameInput = $("[data_test='password']");
-    private SelenideElement loginButton = $("[data_test='login-button']");
+    private SelenideElement userNameInput = $("#user-name");
+    private SelenideElement passwordNameInput = $("#password");
+    private SelenideElement loginButton = $("#login-button");
 
     public LoginPage openLoginPage() {
         Selenide.open("https://www.saucedemo.com/");

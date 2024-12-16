@@ -18,7 +18,7 @@ public class CheckoutPage {
 
     private SelenideElement postalCodeInput = $("[data-test='postalCode']");
 
-    private SelenideElement continueButton = $("[data-test='postalCode']");
+    private SelenideElement continueButton = $("[data-test='continue']");
 
     private SelenideElement finishButton = $("[data-test='finish']");
 
