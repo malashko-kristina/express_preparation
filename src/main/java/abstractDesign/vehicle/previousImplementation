@@ -1,0 +1,11 @@
+public class VehicleFactory {
+    public Object createVehicle(String type) {
+        if (type.equals("car")) {
+            return new Car();
+        } else if (type.equals("bike")) {
+            return new Bike();
+        } else {
+            throw new IllegalArgumentException("Unknown vehicle type: " + type);
+        }
+    }
+}
